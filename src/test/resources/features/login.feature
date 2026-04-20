@@ -1,21 +1,21 @@
 Feature: Login Test
 
-  Scenario: Test Wrong Username and Password
-    Given user opens browser
-    When user goes to test site
-    Then user logs in, incorrect username and password
-
-  Scenario: Test Wrong Password
-    Given user opens browser
-    When user goes to test site
-    Then user logs in, incorrect password
-
   Scenario: Test Correct Login
     Given user opens browser
     When user goes to test site
     Then user logs in
 
-  Scenario: Test No Inputs
+  Scenario: Test No Last Name
     Given user opens browser
     When user goes to test site
-    Then user continues without inputs
+    Then user logs in, no last name
+
+  Scenario: Test Wrong Password
+    Given user opens browser
+    When user goes to test site
+    Then user logs in, non matching passwords
+
+  Scenario: Test Didn't Accept Terms
+    Given user opens browser
+    When user goes to test site
+    Then user logs in, didn't accept terms
